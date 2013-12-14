@@ -1,0 +1,29 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: resumed_in_development # name your development app something
+  host: localhost
+  pool: 5
+  username: resumed_in
+  password: resumed_in # or leave blank if you didn't set a password
+
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  database: resumed_in_test
+  host: localhost
+  pool: 5
+  username: resumed_in
+  password: resumed_in
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: resumed_in_production
+  host: localhost
+  pool: 5
+  username: resumed_in
+  password: resumed_in
+
+cucumber:
+  <<: *test
